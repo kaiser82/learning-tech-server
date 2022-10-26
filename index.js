@@ -18,11 +18,12 @@ app.get("/", (req, res) => {
     res.send("Tech Learning Server is Running...")
 });
 
+// api to get all items
 app.get('/categories', (req, res) => {
     res.send(categories)
 });
 
-
+// api to get a specific item
 app.get('/category/:id', (req, res) => {
     const id = req.params.id;
     console.log(id);
