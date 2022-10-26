@@ -4,6 +4,9 @@ const cors = require("cors");
 app.use(cors());
 
 
+const categories = require('./data/data.json');
+
+
 const port = process.env.port || 5000;
 
 app.listen(port, () => {
@@ -12,5 +15,17 @@ app.listen(port, () => {
 
 
 app.get("/", (req, res) => {
-    res.send("Now Server is Running...")
+    res.send("Tech Learning Server is Running...")
+});
+
+app.get('/categories', (req, res) => {
+    res.send(categories)
+});
+
+
+app.get('/category/:id', (req, res) => {
+    const id = req.params.id;
+    console.log(id);
+    const category = categories.find(item => item.id === id);
+    res.send(category);
 })
