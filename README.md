@@ -1,8 +1,8 @@
-# Tch Learning Server
+# Tech Learning Server
 
 ## Server Provider
 
-for server we used vercel.
+for online server we used vercel.
 
 ### Server link
 
