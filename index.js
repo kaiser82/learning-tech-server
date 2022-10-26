@@ -30,3 +30,9 @@ app.get('/category/:id', (req, res) => {
     const category = categories.find(item => item.id === id);
     res.send(category);
 })
+app.get('/detail/:id', (req, res) => {
+    const id = req.params.id;
+    console.log(id);
+    const detail = categories.find(item => item.id === id);
+    res.send(detail);
+})
